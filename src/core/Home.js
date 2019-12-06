@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Layout from './Layout'
 import {getProducts} from './apiCore'
-// import Card from './Card'
+import Card from './Card'
 // import Search from './Search'
 // import "./carousel.scss"
 // import Slider from '../SlideComponent/NetflixSlider/Slider'
@@ -44,9 +44,19 @@ const Home = () => {
             description="events discovery app"
             className="container-fluid"
         >
-            {JSON.stringify(productsBySell)}
-            <hr/>
-            {JSON.stringify(productsByArrival)}
+            <h2 className="mb-3">Best Sellers</h2>
+            <div className="row">
+            {productsBySell.map((product, i) => (
+                <Card key={i} product={product}/>
+            ))}
+            </div>
+
+            <h2 className="mb-3">new arrivals</h2>
+            <div className="row">
+            {productsBySell.map((product, i) => (
+                <Card key={i} product={product}/>
+            ))}
+            </div>
         </Layout>
     )
 }
