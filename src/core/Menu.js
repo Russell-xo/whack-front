@@ -20,8 +20,14 @@ const Menu = ({history}) => (
             <h1 className="logo">Whack<span>T</span>icket</h1>
             <nav id="main_nav">
                 <Link className="nav-link" style={isActive(history, "/")} to="/">Home</Link>
+            </nav>
+            <nav id="main_nav">
                 <Link className="nav-link" style={isActive(history, "/signin")} to="/signin">Signin</Link>
+            </nav>
+            <nav id="main_nav">
                 <Link className="nav-link" style={isActive(history, "/signup")} to="/signup">Signup</Link>
+            </nav>
+            <nav id="main_nav">
                 <span 
                     className="nav-link" 
                     style={{cursor: 'pointer', color: '#ffffff'}}
