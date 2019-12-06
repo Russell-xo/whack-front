@@ -21,6 +21,9 @@ const Menu = ({history}) => (
             <nav id="main_nav">
                 <Link className="nav-link" style={isActive(history, "/")} to="/">Home</Link>
             </nav>
+            <nav id="main_nav">
+                <Link className="nav-link" style={isActive(history, "/user/dashboard")} to="/user/dashboard">Dashboard</Link>
+            </nav>
             {!isAuthenticated() && ( 
             <Fragment>
             <nav id="main_nav">
@@ -35,13 +38,13 @@ const Menu = ({history}) => (
             <nav id="main_nav">
                 <span 
                     className="nav-link" 
-                    style={{cursor: 'pointer', color: '#ffffff'}}
+                    style={{cursor: 'pointer', color: ''}}
                     onClick={() => 
                         signout(() =>{
                             history.push("/")
                         }
                     )}
-                    >signout
+                    >Signout
                 </span>   
             </nav>
              )}

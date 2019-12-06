@@ -48,7 +48,12 @@ h1, h2, h3, h4, h5, h6 {
         text-decoration: none;
         margin-left: 1em;
         }
-    }
+    span {
+      color: $secondary;
+      text-decoration: none;
+      margin-left: 1em;
+      }
+  }
 }
 #banner {
     background: url(./images/homebanner.jpg);
