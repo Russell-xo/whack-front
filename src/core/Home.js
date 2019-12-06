@@ -1,14 +1,53 @@
-import React from "react"
+import React, {useState, useEffect} from 'react'
 import Layout from './Layout'
-import {API} from "../config"
+import {getProducts} from './apiCore'
+// import Card from './Card'
+// import Search from './Search'
+// import "./carousel.scss"
+// import Slider from '../SlideComponent/NetflixSlider/Slider'
+
+const Home = () => {
+    const [productsBySell, setProductsBySell] = useState([])
+    const [productsByArrival, setProductsByArrival] = useState([])
+    const [error, setError] = useState(false)
+
+    const loadProductsBySell = () => {
+        getProducts('sold').then(data => {
+            if(data.error) {
+                setError(data.error)
+            } else{
+                setProductsBySell(data)
+            }
+        })
+    }
 
 
-const Home = () => (
-    <Layout title="Home Page"
-            description="testing">
-            {API}
+    const loadProductsByArrival = () => {
+        getProducts('createdAt').then(data => {
+            if(data.error) {
+                setError(data.error)
+            } else{
+                setProductsByArrival(data)
+            }
+        })
+    }
 
-    </Layout>
+    useEffect(() => {
+        loadProductsByArrival()
+        loadProductsBySell()
+
+    }, [])
+
+    return(
+        <Layout 
+            title="Home Page"
+            description="events discovery app"
+            className="container-fluid"
+        >
+            {JSON.stringify(productsBySell)}
+            <hr/>
+            {JSON.stringify(productsByArrival)}
+        </Layout>
     )
-
+}
 export default Home
