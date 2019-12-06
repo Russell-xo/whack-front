@@ -1,5 +1,6 @@
-import React from "react"
+import React, {Fragment} from 'react'
 import {Link, withRouter} from 'react-router-dom'
+import {signout, isAuthenticated} from '../auth'
 import '../styles.scss'
 
 const isActive = (history, path) => {
@@ -21,6 +22,16 @@ const Menu = ({history}) => (
                 <Link className="nav-link" style={isActive(history, "/")} to="/">Home</Link>
                 <Link className="nav-link" style={isActive(history, "/signin")} to="/signin">Signin</Link>
                 <Link className="nav-link" style={isActive(history, "/signup")} to="/signup">Signup</Link>
+                <span 
+                    className="nav-link" 
+                    style={{cursor: 'pointer', color: '#ffffff'}}
+                    onClick={() => 
+                        signout(() =>{
+                            history.push("/")
+                        }
+                    )}
+                    >signout
+                </span> 
                 
             </nav>
             {/* <nav className="nav-item">
