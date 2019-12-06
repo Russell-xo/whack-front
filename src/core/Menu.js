@@ -21,12 +21,17 @@ const Menu = ({history}) => (
             <nav id="main_nav">
                 <Link className="nav-link" style={isActive(history, "/")} to="/">Home</Link>
             </nav>
+            {!isAuthenticated() && ( 
+            <Fragment>
             <nav id="main_nav">
                 <Link className="nav-link" style={isActive(history, "/signin")} to="/signin">Signin</Link>
             </nav>
             <nav id="main_nav">
                 <Link className="nav-link" style={isActive(history, "/signup")} to="/signup">Signup</Link>
             </nav>
+            </Fragment>
+            )}
+            {isAuthenticated() && ( 
             <nav id="main_nav">
                 <span 
                     className="nav-link" 
@@ -37,15 +42,9 @@ const Menu = ({history}) => (
                         }
                     )}
                     >signout
-                </span> 
-                
+                </span>   
             </nav>
-            {/* <nav className="nav-item">
-                <Link className="nav-link" to="/signin">Signin</Link>
-            </nav>
-            <nav className="nav-item">
-                <Link className="nav-link" to="/signup">Signup</Link>
-            </nav> */}
+             )}
         </div>
     </header>
    
