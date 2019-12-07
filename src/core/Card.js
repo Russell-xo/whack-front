@@ -7,7 +7,7 @@ import '../styles.scss'
 
 const Card = ({product}) => {
     return (
-        <div className= "col-4 mb-3">
+        <div className= "col-2 mb-4">
             <div className="row">
                 <div className="post">
                 <ShowImage item={product} url="product"/>
@@ -16,7 +16,7 @@ const Card = ({product}) => {
                     <p>£{product.price}</p>
                     <Link to="/">
                     <button className="btn btn-outline-primary mt-2 mb-2">
-                        View Product
+                        View
                     </button>
                     
                     </Link>
