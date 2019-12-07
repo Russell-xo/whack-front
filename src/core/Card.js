@@ -16,8 +16,8 @@ const Card = ({product}) => {
                     {/* <p>{product.description}</p> */}
                     <p>£{product.price}</p>
                     <Link to="/">
-                    <button className="btn btn-outline-primary mt-2 mb-2">
-                        View
+                    <button className="btn-one">
+                        Tickets
                     </button>
                     </Link>
                 </div>
