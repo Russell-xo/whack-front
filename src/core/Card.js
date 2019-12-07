@@ -15,13 +15,12 @@ const Card = ({product}) => {
                 <div className="title">{product.name}</div>
                     {/* <p>{product.description}</p> */}
                     <p>£{product.price}</p>
-                </div>
                     <Link to="/">
                     <button className="btn btn-outline-primary mt-2 mb-2">
                         View
                     </button>
-                    
                     </Link>
+                </div>
                 </div>
             </div>
          </div>
