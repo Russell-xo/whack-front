@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Link, Redirect } from 'react-router-dom'
-// import ShowImage from './ShowImage'
+import ShowImage from './ShowImage'
 // import moment from 'moment'
 // import {addItem, updateItem, removeItem} from './cardHelpers'
 
@@ -10,6 +10,7 @@ const Card = ({product}) => {
             <div className="card">
                 <div className="card-header">{product.name}</div>
                 <div className="card-body">
+                <ShowImage item={product} url="product"/>
                     <p>{product.description}</p>
                     <p>£{product.price}</p>
                     <Link to="/">
