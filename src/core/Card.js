@@ -11,9 +11,11 @@ const Card = ({product}) => {
             <div className="row">
                 <div className="post">
                 <ShowImage item={product} url="product"/>
+                <div className="specifice">
                 <div className="title">{product.name}</div>
                     {/* <p>{product.description}</p> */}
                     <p>£{product.price}</p>
+                </div>
                     <Link to="/">
                     <button className="btn btn-outline-primary mt-2 mb-2">
                         View
