@@ -1,9 +1,10 @@
 import React from 'react'
 import {API} from '../config'
+import '../styles.scss'
 
 
 const ShowImage = ({item, url}) => (
-    <div className="box">
+    <div className="imgbox">
         <img 
             src={`${API}/${url}/photo/${item._id}`} 
             alt={item.name} 

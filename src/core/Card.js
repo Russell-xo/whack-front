@@ -17,6 +17,9 @@ const Card = ({product}) => {
                     <button className="btn btn-outline-primary mt-2 mb-2">
                         View Product
                     </button>
+                    <button className="btn btn-outline-primary mt-2 mb-2">
+                        Add
+                    </button>
                     </Link>
                 </div>
             </div>
