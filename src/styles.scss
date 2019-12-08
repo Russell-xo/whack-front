@@ -329,7 +329,6 @@ body{
   opacity: 0; 
   transform: scale(0.1, 1);
 }
-
 .search-box{
   position: absolute;
   top: 50%;
@@ -344,9 +343,9 @@ body{
   width: 240px;
   padding: 0 6px;
 }
-.search-box:hover > .search-btn{
-  background: white;
-}
+// .search-box:hover > .search-btn{
+//   background: white;
+// }
 .search-btn{
   color: #e84118;
   float: right;
@@ -370,6 +369,7 @@ body{
   width: 0px;
 
 }
+
 
 // .imgbox .name{
 //   position: absolute;

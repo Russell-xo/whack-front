@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Layout from './Layout'
 import { getCategories, list } from './apiCore'
 import Card from './Card'
+import '../styles.scss'
 
 const Search = () => {
 
@@ -83,29 +84,32 @@ const Search = () => {
 
     const searchForm = () => (
         <form onSubmit={searchSubmit}>
-            <span className="input-group-text">
-                <div className="input-group input-group-lg">
-                    <div className="input-group-prepend">
-                        <select className="btn mr-2" onChange={handleChange("category")}>
-                            <option value="ALL">All</option>
-                            {categories.map((c, i) => (<option key={1} value={c._id}>{c.name}
-                            </option>))}
-                        </select>
-                    </div>
+            {/* <span className="input-group-text"> */}
+                <div className="search-box">
+                    {/* <div className="input-group-prepend"> */}
+                        {/* <select className="btn mr-2" onChange={handleChange("category")}>
+                            <option value="ALL">All</option> */}
+                            {/* {categories.map((c, i) => (<option key={1} value={c._id}>{c.name}
+                            </option>))} */}
+                        {/* </select> */}
+                    {/* </div> */}
 
                     <input
                         type="search"
-                        className="form-control"
+                        className="search-txt"
                         onChange={handleChange("search")}
-                        placeholder="Search by name"
+                        placeholder="Type to search"
                     />
+                    <a className="search-btn" href="#">
+                    <i class="fas fa-search"></i>
+                    </a>
 
                 </div>
-                <div className="btn input-group-append" style={{ border: 'none' }}>
+                {/* <div className="btn input-group-append" style={{ border: 'none' }}>
                     <button className="input-group-text">Search</button>
 
-                </div>
-            </span>
+                </div> */}
+            {/* </span> */}
         </form>
     )
 
