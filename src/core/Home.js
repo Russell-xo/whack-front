@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Layout from './Layout'
 import {getProducts} from './apiCore'
 import Card from './Card'
-// import Search from './Search'
+import Search from './Search'
 // import "./carousel.scss"
 // import Slider from '../SlideComponent/NetflixSlider/Slider'
 
@@ -44,6 +44,7 @@ const Home = () => {
             description="events discovery app"
             className="container-fluid"
         >
+            <Search></Search>
             <h2 className="mb-3">Best Sellers</h2>
             <div className="row">
             {productsBySell.map((product, i) => (
