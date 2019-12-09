@@ -22,8 +22,16 @@ html, body {
     margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
     font-weight: 300;
+    color: white;
+}
+h2{
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 3em;
+
 }
 
 #top_header{
@@ -85,7 +93,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: #34495e;
+    background: #181818;
   }
 
 .box{
