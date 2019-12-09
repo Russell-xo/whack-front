@@ -167,11 +167,33 @@ body{
     background: #2ecc71;
   }
 
+#best_sellers, #new_arrivals{
+  padding: 1.5em 0;
+  header {
+    padding: 1.5em 0;
+    h2, .view_more{
+      display:inline;
+      color: white;
+    }
+    h2{
+      font-size: 1.75em;
+    }
+    .view_more {
+    float: right;
+    font-size: 1em;
+    margin: .75em 3.5% 0;
+    }
+  }
+}
+// #best_sellers{
+//   border-bottom: 1px solid #d4d4d4;
+// }
+
 .row {
   width: 100%;
-  padding: 14px;
-  border-spacing:5em;
-  display: flex;
+  // padding: 14px;
+  // border-spacing:5em;
+  // display: flex;
   .post {
     width: 14%;
     float: left;
@@ -197,6 +219,7 @@ body{
     }
   }
 }
+
 
 .imgbox {
   padding: -1px;
@@ -394,6 +417,8 @@ body{
         background-size: cover;
   min-height: 100%;
   background-position: center;
+  margin-right: auto;
+  margin-left: auto;
   
 }
 
