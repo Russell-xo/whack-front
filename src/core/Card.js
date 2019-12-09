@@ -7,8 +7,8 @@ import '../styles.scss'
 
 const Card = ({product}) => {
     return (
-        <div className= "col-3 mb-4">
-            <div className="row">
+        <div className= "col-2 mb-2">
+            {/* <div className="row"> */}
                 <div className="post">
                 <ShowImage item={product} url="product"/>
                 <div className="specifice">
@@ -23,7 +23,7 @@ const Card = ({product}) => {
                 </div>
                 </div>
             </div>
-         </div>
+        //  </div>
     )
 }
 export default Card
