@@ -44,7 +44,7 @@ const Home = () => {
             description="events discovery app"
             className="container-fluid"
         >
-            <Search></Search>
+            {/* <Search></Search> */}
             <h2 className="mb-3">Best Sellers</h2>
             <div className="row">
             {productsBySell.map((product, i) => (
