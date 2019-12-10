@@ -7,9 +7,7 @@ import '../styles.scss'
 
 const Card = ({product}) => {
     return (
-        <div className= "col-2 mb-2">
-            {/* <div className="row"> */}
-                <div className="post">
+            <div className="post">
                 <ShowImage item={product} url="product"/>
                 <div className="specifice">
                 <div className="title">{product.name}</div>
@@ -21,8 +19,8 @@ const Card = ({product}) => {
                     </button>
                     </Link>
                 </div>
-                </div>
             </div>
+            
         //  </div>
     )
 }
