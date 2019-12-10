@@ -187,6 +187,25 @@ h2{
     }
   }
 }
+
+#related_products, #new_arrivals{
+  padding: .7em 0;
+  header {
+    padding: 0 0 1.5em 0;
+    h2, .view_more{
+      display:inline;
+      color: white;
+    }
+    h2{
+      font-size: 1.75em;
+    }
+    .view_more {
+    float: right;
+    font-size: 1em;
+    margin: .75em 3.5% 0;
+    }
+  }
+}
 // #best_sellers{
 //   border-bottom: 1px solid #d4d4d4;
 // }
