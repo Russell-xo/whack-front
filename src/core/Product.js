@@ -56,7 +56,7 @@ const Product = (props) => {
                 )}
                 </div>
 
-                <div className="col-4">
+                <div className="row">
                     <h4>Related products</h4>
                     {relatedProduct.map((p, i) => (
                     
