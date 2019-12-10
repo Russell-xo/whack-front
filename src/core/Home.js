@@ -45,7 +45,7 @@ const Home = () => {
             className="container-fluid"
         >
             {/* <Search></Search> */}
-            <section id="best_sellers">
+            <section id="best_sellers" className="clearfix">
                 <div className="wrapper">
                     <header className="clearfix">
                         <h2>Best Sellers</h2>
@@ -60,7 +60,7 @@ const Home = () => {
                 </div>
             ))}
             </div>
-            <section id="new_arrivals">
+            <section id="new_arrivals" className="clearfix">
                 <div className="wrapper">
                     <header className="clearfix">
                         <h2>new arrivals</h2>
