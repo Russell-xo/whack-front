@@ -15,7 +15,7 @@ const Card = ({product}) => {
                 <div className="title">{product.name}</div>
                     {/* <p>{product.description}</p> */}
                     <p>£{product.price}</p>
-                    <Link to="/">
+                    <Link to={`/product/${product._id}`}>
                     <button className="btn-one">
                         Tickets
                     </button>
