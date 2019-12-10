@@ -41,7 +41,11 @@ const DetailCard = ({product}) => {
                     <div class="qty">
                         <h5>qty</h5>
                         <a href="#!" class="option">(1)</a>
-
+                    </div>
+                    <div class="footer">
+                    <button type="button">
+                        
+                    </button>
                     </div>
                 </div>
                 
