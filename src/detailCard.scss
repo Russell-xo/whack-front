@@ -26,13 +26,13 @@
       }
   }
   
-  body{
-    background-color: $bg;
-    height: 100vh;
-    margin: auto;
-    display: flex;
-    color: $textColor;
-  }
+//   body{
+//     background-color: $bg;
+//     height: 100vh;
+//     margin: auto;
+//     display: flex;
+//     color: $textColor;
+//   }
   
   .container{
     margin: 30px;
@@ -83,6 +83,7 @@
       .title{
         text-transform: uppercase;
         margin: 0;
+        color: black;
       }
       .colorCat{
         text-transform: uppercase;

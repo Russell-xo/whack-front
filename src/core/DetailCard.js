@@ -44,15 +44,9 @@ const DetailCard = ({product}) => {
 
                     </div>
                 </div>
-                <div class="footer">
-                <button type="button">
-                <img src="http://co0kie.github.io/codepen/nike-product-page/cart.png" alt="">
-                <span>add to cart</span>
-                </img>
-                </button>
-                </div>
                 
             </div>
         </div>  
     )
 }
+export default DetailCard
