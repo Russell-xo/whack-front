@@ -7,7 +7,7 @@ import '../styles.scss'
 
 const Card = ({product}) => {
     return (
-            <div className="post">
+            <div>
                 <ShowImage item={product} url="product"/>
                 <div className="specifice">
                 <div className="title">{product.name}</div>

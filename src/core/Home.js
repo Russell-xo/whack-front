@@ -3,6 +3,7 @@ import Layout from './Layout'
 import {getProducts} from './apiCore'
 import Card from './Card'
 import Search from './Search'
+import '../styles.scss'
 // import "./carousel.scss"
 // import Slider from '../SlideComponent/NetflixSlider/Slider'
 
@@ -68,10 +69,10 @@ const Home = () => {
                     </header>
                 </div>
             </section>
-            <div className="row">
+            <div className="erow">
             {productsBySell.map((product, i) => (
-                <div key={i} className= "col-2 mb-2">
-                <Card product={product}/>
+                <div className= "post">
+                <Card key={i} product={product}/>
                 </div>
             ))}
             </div>
