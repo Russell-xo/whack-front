@@ -54,9 +54,9 @@ const Home = () => {
                     </header>
                 </div>
             </section>
-            <div className="row">
+            <div className="erow">
             {productsBySell.map((product, i) => (
-                <div key={i} className= "col-2 mb-2">
+                <div key={i} className= "post">
                 <Card product={product}/>
                 </div>
             ))}
