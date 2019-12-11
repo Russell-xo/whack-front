@@ -70,7 +70,7 @@ const Home = () => {
                 </div>
             </section>
             <div className="erow">
-            {productsBySell.map((product, i) => (
+            {productsByArrival.map((product, i) => (
                 <div className= "post">
                 <Card key={i} product={product}/>
                 </div>
