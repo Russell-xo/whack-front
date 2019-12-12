@@ -83,7 +83,7 @@ const Signin = () => {
         <Layout 
             title="Sign in"
             description="This is the sign up page"
-            className="container col-md-2 offset-md-5"
+            // className="container col-md-2 offset-md-5"
         >
             {showLoading()}
             {showError()}
