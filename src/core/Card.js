@@ -8,16 +8,18 @@ import '../styles.scss'
 const Card = ({product}) => {
     return (
             <div>
+                <Link to={`/product/${product._id}`}>
                 <ShowImage item={product} url="product"/>
+                </Link>
                 <div className="specifice">
                 <div className="title">{product.name}</div>
                     {/* <p>{product.description}</p> */}
                     <p>£{product.price}</p>
-                    <Link to={`/product/${product._id}`}>
+                    {/* <Link to={`/product/${product._id}`}>
                     <button className="btn-one">
                         Tickets
                     </button>
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
             
