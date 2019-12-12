@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import Layout from './Layout'
 import {read, listRelated} from './apiCore'
-// import Card from './Card'
+import Card from './Card'
 import '../detailCard.scss'
+import '../styles.scss'
 import DetailCard from './DetailCard'
 
 
@@ -48,24 +49,24 @@ const Product = (props) => {
             className="container-fluid"
         
         >           
-            <div className="row">
-                <div className="col-8">
+            <div className="detailrow">
+                <div className="post">
                 {product && 
                 product.description && (
                 <DetailCard product={product} showViewProductButton={false}/>
                 )}
                 </div>
+            </div>
 
-                <div className="row">
+                <div className="erow">
                     <h4>Related products</h4>
                     {relatedProduct.map((p, i) => (
                     
-                        <div className="mb-3"> 
-                            <DetailCard key={i} product={p} />
+                        <div className="post"> 
+                            <Card key={i} product={p} />
                         </div>
                     ))}
                 </div>
-            </div>
         </Layout>
     )
 }

@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import { Link, Redirect } from 'react-router-dom'
-import ShowImage from './ShowImage'
+// import ShowImage from './ShowImage'
 import '../detailCard.scss'
+import ShowImageDetail from './ShowImageDetail'
 
 
 const DetailCard = ({product}) => {
@@ -9,7 +10,7 @@ const DetailCard = ({product}) => {
     return (
         <div class="container">
             <div class="product-image">
-                <ShowImage item={product} url="product"/>
+                <ShowImageDetail item={product} url="product"/>
             </div>
             <div class="product-details">
                 <header>
