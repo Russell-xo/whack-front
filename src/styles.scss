@@ -222,6 +222,7 @@ h2{
     flex-basis: 100%;
     float: left;
     margin-right: 1%;
+    color: #FFF;
     img {
       width: 100%;
       max-width: 100%;
@@ -235,6 +236,7 @@ h2{
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
+      color: #FFF;
     }
     .post_info {
       font-size: .75em;
@@ -317,6 +319,7 @@ h2{
   background: #fff;
   padding: 10px;
   box-sizing: border-box;
+  background-color: #48484b;
 }
 
 .specifice h2 {
