@@ -4,7 +4,7 @@ import '../imageDetail.scss'
 
 
 const ShowImageDetail = ({item, url}) => (
-    <div className="imgbox">
+    <div className="showimgbox">
         <img 
             src={`${API}/${url}/photo/${item._id}`} 
             alt={item.name} 
