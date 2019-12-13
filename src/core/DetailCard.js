@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom'
 // import ShowImage from './ShowImage'
 import '../detailCard.scss'
 import ShowImageDetail from './ShowImageDetail'
+import {addItem, updateItem, removeItem} from './cartHelpers'
 
 
 const DetailCard = ({product}) => {
