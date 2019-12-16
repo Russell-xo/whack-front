@@ -33,6 +33,31 @@
 //     display: flex;
 //     color: $textColor;
 //   }
+h4{
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  // margin-top: 3em;
+  padding: .7em 0;
+  justify-content: center;
+  align-items: center;
+
+}
+.relatedrow {
+  width: 100%;
+  padding: 14px;
+  // border-spacing:5em;
+  display: flex;
+  // margin-right: -15px;
+  margin-left: 8px;
+  justify-content: center;
+  .relatedpost {
+    flex-basis: 1%;
+    float: left;
+    margin-right: 1%;
+    color: #FFF;
+  }
+}
 
 .icontainer{
   margin: 0 5px;

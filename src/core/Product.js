@@ -3,7 +3,7 @@ import Layout from './Layout'
 import {read, listRelated} from './apiCore'
 import Card from './Card'
 import '../detailCard.scss'
-import '../styles.scss'
+// import '../styles.scss'
 import DetailCard from './DetailCard'
 
 
@@ -57,12 +57,12 @@ const Product = (props) => {
                 )}
                 </div>
             {/* </div> */}
-
-                <div className="erow">
-                    <h4>Related products</h4>
+                <h4>Related products</h4>
+                <div className="relatedrow">
+                    {/* <h4>Related products</h4> */}
                     {relatedProduct.map((p, i) => (
                     
-                        <div className="post"> 
+                        <div className="relatedpost"> 
                             <Card key={i} product={p} />
                         </div>
                     ))}
