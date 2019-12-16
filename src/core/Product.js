@@ -50,13 +50,13 @@ const Product = (props) => {
         
         >           
             <div className="detailrow">
-                <div className="post">
+                {/* <div className="post"> */}
                 {product && 
                 product.description && (
                 <DetailCard product={product} showViewProductButton={false}/>
                 )}
                 </div>
-            </div>
+            {/* </div> */}
 
                 <div className="erow">
                     <h4>Related products</h4>
