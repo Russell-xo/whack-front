@@ -6,7 +6,68 @@ import ShowImageDetail from './ShowImageDetail'
 import {addItem, updateItem, removeItem} from './cartHelpers'
 
 
-const DetailCard = ({product}) => {
+const DetailCard = ({product, showViewProductButton = true, showAddToCartButton = true, cartUpdate = false, showRemoveProductButton = false, setRun = f => f,run = undefined}) => {
+
+    const [redirect, setRedirect] = useState(false)
+    const [count, setCount] = useState(product.count)
+
+
+
+    const addToCart = () => {
+        // console.log('added');
+        addItem(product, setRedirect(true));
+      };
+
+    const shouldRedirect = redirect => {
+        if (redirect) {
+          return <Redirect to="/cart" />;
+        }
+    };
+    
+    const showAddToCart = (showAddToCartButton) =>{
+        return showAddToCartButton && (
+            <button onClick={addToCart}className="btn btn-outline-warning mt-2 mb-2">
+                        Add to card
+                    </button>
+        )
+    }
+
+    const showRemoveButton = showRemoveProductButton => {
+        return (
+          showRemoveProductButton && (
+            <button
+              onClick={() => {
+                removeItem(product._id);
+                setRun(!run); // run useEffect in parent Cart
+              }}
+              className="btn btn-outline-danger mt-2 mb-2"
+            >
+              Remove Product
+            </button>
+          )
+        );
+      };
+
+    const handleChange = productId => event => {
+        setRun(!run); // run useEffect in parent Cart
+        setCount(event.target.value < 1 ? 1 : event.target.value);
+        if (event.target.value >= 1) {
+          updateItem(productId, event.target.value);
+        }
+      }
+
+    const showCartUpdateOptions = cartUpdate => {
+        return cartUpdate && <div>
+            <div className="input-group mb-3">
+                <div className="input-group-prepend">
+                    <span className="input-group-text">Adjust Quantity
+
+                    </span>
+                </div>
+                <input type="number" className="form-control" value={count} onChange={handleChange(product._id)}/>
+            </div>
+        </div>
+    }
     
     return (
         <div class="container">
@@ -14,6 +75,7 @@ const DetailCard = ({product}) => {
                 <ShowImageDetail item={product} url="product"/>
             </div>
             <div class="product-details">
+            {shouldRedirect(redirect)}
                 <header>
                     <h1 class="title">{product.name}</h1>
                     <span class="colorCat">mint green</span>
@@ -50,6 +112,10 @@ const DetailCard = ({product}) => {
                     </button>
                     </div>
                 </div>
+
+                {showAddToCart(showAddToCartButton)}
+                {showRemoveButton(showRemoveProductButton)}
+                {showCartUpdateOptions(cartUpdate)}
                 
             </div>
         </div>  
