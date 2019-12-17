@@ -50,14 +50,17 @@ const Cart = () => {
      
       return (
         <Layout title="Shopping Cart" description="Checkout now!" className="container-fluid">
-          <div className="relatedrow">
-            <div className="col-6">{items.length > 0 ? showItems(items) : noItemsMessage()}</div>
-            <div className="col-6">
+          <div className="row">
+            <div className="col-6">{items.length > 0 ? showItems(items) : noItemsMessage()}</div> 
+              </div>
+              <div className="relatedrow">
               <h2 className="mb-4">Your Cart Summary</h2>
               <hr />
               <Checkout products={items} />
-            </div>
-          </div>
+              </div>
+               
+            
+          
         </Layout>
       );
     };
