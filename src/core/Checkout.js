@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Layout from './Layout'
 import {getProducts, getBraintreeClientToken, processPayment} from './apiCore'
+import {emptyCart} from './cartHelpers'
 import Card from './Card'
 import Search from './Search'
 import {isAuthenticated} from '../auth'
@@ -71,6 +72,9 @@ const Checkout = ({products, setRun = f => f, run = undefined}) => {
             .then(response => {
                 // console.log(response
                 setData({...data, success: response.success})
+                emptyCart(() => {
+                    console.log("payment success and empty cart")
+                })
                 // empty cart
                 // create order
                 })
