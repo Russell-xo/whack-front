@@ -27,7 +27,7 @@ const Checkout = ({products, setRun = f => f, run = undefined}) => {
                 setData({...data, error: data.error})
 
             }else {
-                setData({...data, clientToken:data.clientToken})
+                setData({clientToken:data.clientToken})
             
             }
         })
