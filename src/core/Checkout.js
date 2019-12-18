@@ -70,7 +70,7 @@ const Checkout = ({products, setRun = f => f, run = undefined}) => {
     }
 
     const showDropIn = () => (
-        <div>
+        <div onBlur={() => setData({...data, error: ""})}>
             {data.clientToken !== null && products.length > 0 ? (
                 <div>
                     <DropIn options={{
