@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Layout from './Layout'
-import {getProducts, getBraintreeClientToken} from './apiCore'
+import {getProducts, getBraintreeClientToken, processPayment} from './apiCore'
 import Card from './Card'
 import Search from './Search'
 import {isAuthenticated} from '../auth'
@@ -59,12 +59,25 @@ const Checkout = ({products, setRun = f => f, run = undefined}) => {
         let nonce;
         let getNonce = data.instance.requestPaymentMethod()
         .then(data => {
-            console.log(data)
+            // console.log(data)
             nonce = data.nonce
-            console.log('send nonce and total to process: ', nonce, getTotal(products))
+            // console.log('send nonce and total to process: ', nonce, getTotal(products))
+            const paymentDate = {
+                paymentMethodNonce: nonce,
+                amount: getTotal(products)
+            }
+
+            processPayment(userId, token, paymentDate)
+            .then(response => {
+                // console.log(response
+                setData({...data, success: response.success})
+                // empty cart
+                // create order
+                })
+            .catch(error => console.log(error))
         })
         .catch(error => {
-            console.log('dropin error:', error)
+            // console.log('dropin error:', error)
             setData({...data, error: error.message})
         })
     }
@@ -92,9 +105,21 @@ const Checkout = ({products, setRun = f => f, run = undefined}) => {
 
     )
 
+    const showSuccess = success => (
+        <div className="alert alert-info" 
+        style={{display: success ? "" : "none"}}
+        >
+            Thanks! Payment was successful
+
+        </div>
+
+    )
+
+
     return ( 
     <div>
         <h2>Total: ${getTotal()}</h2>
+        {showSuccess(data.success)}
         {showError(data.error)}
         {showCheckout()}
       </div>
