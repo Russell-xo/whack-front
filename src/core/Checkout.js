@@ -82,19 +82,21 @@ const Checkout = ({products, setRun = f => f, run = undefined}) => {
 
                 const createOrderData = {
                     products: products, 
-                    transaction_id: response.transaction_id, 
+                    transaction_id: response.transaction.id, 
                     amount: response.transaction.amount,
                     address: data.address
                 }
 
                 createOrder(userId, token, createOrderData)
 
-                setData({...data, success: response.success})
                 emptyCart(() => {
                     console.log("payment success and empty cart")
-                    setData({loading: false})
+                    setData({loading: false, success: response.success})
+                    // setData({...data, success: response.success})
                 })
                 })
+                
+                 
             .catch(error => {
                 console.log(error)
                 setData({loading: false})
