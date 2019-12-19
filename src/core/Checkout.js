@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Layout from './Layout'
-import {getProducts, getBraintreeClientToken, processPayment} from './apiCore'
+import {getProducts, getBraintreeClientToken, processPayment, createOrder} from './apiCore'
 import {emptyCart} from './cartHelpers'
 import Card from './Card'
 import Search from './Search'
@@ -41,6 +41,10 @@ const Checkout = ({products, setRun = f => f, run = undefined}) => {
 
     }, [])
 
+    const handleAddress = event => {
+        setData({...data, address:event.target.value})
+    }
+
     const getTotal = () => {
         return products.reduce((currentValue, nextValue) => {
             return currentValue + nextValue.count * nextValue.price
@@ -73,13 +77,23 @@ const Checkout = ({products, setRun = f => f, run = undefined}) => {
             processPayment(userId, token, paymentDate)
             .then(response => {
                 // console.log(response
+                // empty cart
+                // create order
+
+                const createOrderData = {
+                    products: products, 
+                    transaction_id: response.transaction_id, 
+                    amount: response.transaction.amount,
+                    address: data.address
+                }
+
+                createOrder(userId, token, createOrderData)
+
                 setData({...data, success: response.success})
                 emptyCart(() => {
                     console.log("payment success and empty cart")
                     setData({loading: false})
                 })
-                // empty cart
-                // create order
                 })
             .catch(error => {
                 console.log(error)
@@ -96,6 +110,14 @@ const Checkout = ({products, setRun = f => f, run = undefined}) => {
         <div onBlur={() => setData({...data, error: ""})}>
             {data.clientToken !== null && products.length > 0 ? (
                 <div>
+                    <div className="gorm-group mb-3">
+                        <label className="text-muted">Delivery address</label>
+                        <textarea
+                            onChange={handleAddress}
+                            className="form-control"
+                            value={data.address}
+                            placeholder="type your delivery address here"/>
+                            </div>
                     <DropIn options={{
                         authorization: data.clientToken,
                         paypal: {
