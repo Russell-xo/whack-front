@@ -14,6 +14,10 @@ const UpdateProduct = ({ match }) => {
         shipping: '',
         quantity: '',
         photo: '',
+        date: '',
+        time: '',
+        address: '',
+        clubname: '',
         loading: false,
         error: false,
         createdProduct: '',
@@ -32,6 +36,10 @@ const UpdateProduct = ({ match }) => {
         shipping,
         quantity,
         loading,
+        date,
+        time,
+        address,
+        clubname,
         error,
         createdProduct,
         redirectToProfile,
@@ -52,6 +60,10 @@ const UpdateProduct = ({ match }) => {
                     category: data.category._id,
                     shipping: data.shipping,
                     quantity: data.quantity,
+                    date: data.date,
+                    time: data.time,
+                    address: data.address,
+                    clubname: data.clubname,
                     formData: new FormData()
                 });
                 // load categories
@@ -96,6 +108,10 @@ const UpdateProduct = ({ match }) => {
                     photo: '',
                     price: '',
                     quantity: '',
+                    date: '', 
+                    time: '', 
+                    address: '', 
+                    clubname: '', 
                     loading: false,
                     error: false,
                     redirectToProfile: true,
@@ -154,6 +170,26 @@ const UpdateProduct = ({ match }) => {
             <div className="form-group">
                 <label className="text-muted">Quantity</label>
                 <input onChange={handleChange('quantity')} type="number" className="form-control" value={quantity} />
+            </div>
+
+            <div className="form-group">
+                <label className="text-muted">Date</label>
+                <input onChange={handleChange('date')}type="text" className="form-control" value={date} />
+            </div>
+
+            <div className="form-group">
+                <label className="text-muted">Time</label>
+                <input onChange={handleChange('time')}type="text" className="form-control" value={time} />
+            </div>
+
+            <div className="form-group">
+                <label className="text-muted">Address</label>
+                <input onChange={handleChange('address')}type="text" className="form-control" value={address} />
+            </div>
+
+            <div className="form-group">
+                <label className="text-muted">Clubname</label>
+                <input onChange={handleChange('clubname')}type="text" className="form-control" value={clubname} />
             </div>
 
             <button className="btn btn-outline-primary">Update Product</button>
