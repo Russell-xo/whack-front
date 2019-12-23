@@ -84,7 +84,18 @@ const AddProduct = () => {
                 setValues({...values, error: data.error})
             } else {
                 setValues({
-                    ...values, name: '', description: '', photo: '', price: '', quantity: '', date: '', time: '', address: '', clubname: '', loading: false, createdProduct: data.name
+                    ...values, 
+                    name: '', 
+                    description: '', 
+                    photo: '', 
+                    price: '', 
+                    uantity: '', 
+                    date: '', 
+                    time: '', 
+                    address: '', 
+                    clubname: '', 
+                    loading: false, 
+                    createdProduct: data.name
                 })
             }
         })
