@@ -89,7 +89,7 @@ const AddProduct = () => {
                     description: '', 
                     photo: '', 
                     price: '', 
-                    uantity: '', 
+                    quantity: '', 
                     date: '', 
                     time: '', 
                     address: '', 
