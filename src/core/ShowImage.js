@@ -1,15 +1,16 @@
 import React from 'react'
 import {API} from '../config'
-import '../styles.scss'
+import '../cardCss.scss'
 
 
 const ShowImage = ({item, url}) => (
-    <div className="imgbox">
+    <div className="card_image-container">
         <img 
             src={`${API}/${url}/photo/${item._id}`} 
             alt={item.name} 
-            className="mb-3" 
-            style={{ maxHeight: "100%", maxWidth: "100%"}}/>
+            // className="mb-3" 
+            // style={{ maxHeight: "100%", maxWidth: "100%"}}
+            />
             {/* // style={{
             //     flex: 1,
             //     alignSelf: 'stretch',
