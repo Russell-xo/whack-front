@@ -14,7 +14,8 @@ const Card = ({product}) => {
                 <div className="specifice">
                 <div className="title">{product.name}</div>
                     {/* <p>{product.description}</p> */}
-                    <p>£{product.price}</p>
+                    <p>{product.clubname}</p>
+                    <p className="price">£{product.price}</p>
                     {/* <Link to={`/product/${product._id}`}>
                     <button className="btn-one">
                         Tickets
