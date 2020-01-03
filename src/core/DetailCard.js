@@ -78,7 +78,7 @@ const DetailCard = ({product, showViewProductButton = true, showAddToCartButton 
             {shouldRedirect(redirect)}
                 <header>
                     <h1 class="title">{product.name}</h1>
-                    <span class="colorCat">mint green</span>
+                    <span class="colorCat">{product.clubname}</span>
                 <div class="price">
                     <p>£{product.price}</p>
                 </div>
