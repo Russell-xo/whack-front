@@ -3,6 +3,7 @@ import Layout from './Layout'
 import {getProducts} from './apiCore'
 import Card from './Card'
 import Search from './Search'
+import Menu from "./Menu"
 import '../styles.scss'
 // import "./carousel.scss"
 // import Slider from '../SlideComponent/NetflixSlider/Slider'
@@ -40,11 +41,17 @@ const Home = () => {
     }, [])
 
     return(
-        <Layout 
-            title="Home Page"
-            description="events discovery app"
-            className="container-fluid"
-        >
+        <div>
+            <Menu />
+            <div id="banner" className="clearfix">
+                <div id="banner_content_wrapper">
+                    <div id="poster">
+
+                    </div>
+
+                </div>
+
+            </div>
             {/* <Search></Search> */}
             <section id="best_sellers" className="clearfix">
                 <div className="wrapper">
@@ -124,7 +131,7 @@ const Home = () => {
                 </div>
 
             </div>
-        </Layout>
+        </div>
     )
 }
 export default Home
