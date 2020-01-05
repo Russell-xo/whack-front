@@ -108,6 +108,7 @@ const Home = () => {
                         <a href="#"><li>Events</li></a>
                         <a href="#"><li>Team</li></a>
                         <a href="#"><li>socials</li></a>
+                        <a href="#"><li>ramdom</li></a>
                         <a href="#"><li>Terms and Conditions</li></a>
                     </ul>
                     </div>
@@ -118,7 +119,7 @@ const Home = () => {
                         <form action="index.html" method="post">
                             <input type="email" name="email" class="text-input contact-input" placeholder="your email address"/>
                             <textarea name="message" class="text-input contact-input" placeholder="your message..."></textarea>
-                            <button type="submit" class="btn btn-big">
+                            <button type="submit" class="sbtn sbtn-big">
                                 <i class="fas fa-envelope"></i>
                                 Send
                             </button>
