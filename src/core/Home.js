@@ -60,7 +60,7 @@ const Home = () => {
                         <p className="view_more">view all</p>
                     </header>
                 </div>
-            </section>
+             
             <div className="erow">
             {productsBySell.map((product, i) => (
                 <div key={i} className= "post">
@@ -68,6 +68,7 @@ const Home = () => {
                 </div>
             ))}
             </div>
+            </section>
             <section id="new_arrivals" className="clearfix">
                 <div className="wrapper">
                     <header className="clearfix">
@@ -75,7 +76,7 @@ const Home = () => {
                         <p className="view_more">view all</p>
                     </header>
                 </div>
-            </section>
+            
             <div className="erow">
             {productsByArrival.map((product, i) => (
                 <div className= "post">
@@ -83,6 +84,7 @@ const Home = () => {
                 </div>
             ))}
             </div>
+            </section>
 
             <div className="footer">
                 <div className="footer-content">
@@ -97,7 +99,7 @@ const Home = () => {
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
                     </div>
 

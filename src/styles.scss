@@ -170,18 +170,18 @@ h2{
 #best_sellers, #new_arrivals{
   padding: 1.5em 0;
   header {
-    padding: 0 0 1.5em 0;
+    padding:    1.5em 0;
     h2, .view_more{
       display:inline;
       color: white;
     }
     h2{
-      font-size: 1.75em;
+      font-size: 1.5em;
     }
     .view_more {
     float: right;
     font-size: 1em;
-    margin: .75em 3.5% 0;
+    margin: .75em .5% 0;
     }
   }
 }
@@ -189,18 +189,18 @@ h2{
 #related_products, #new_arrivals{
   padding: .7em 0;
   header {
-    padding: 0 0 1.5em 0;
+    padding:   1.5em 0;
     h2, .view_more{
       display:inline;
       color: white;
     }
     h2{
-      font-size: 1.75em;
+      font-size: 1.5em;
     }
     .view_more {
     float: right;
     font-size: 1em;
-    margin: .75em 3.5% 0;
+    margin: .75em .5% 0;
     }
   }
 }
