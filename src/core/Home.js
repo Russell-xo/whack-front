@@ -102,7 +102,7 @@ const Home = () => {
                     </div>
 
                     <div className="footer-section links">
-                    <h2>Quick links</h2>
+                    <h1>Quick links</h1>
                     <br/>
                     <ul>
                         <a href="#"><li>Events</li></a>
@@ -114,7 +114,7 @@ const Home = () => {
                     </div>
                     
                     <div className="footer-section contact-form">
-                        <h2>Contact us</h2>
+                        <h1>Contact us</h1>
                         <br/>
                         <form action="index.html" method="post">
                             <input type="email" name="email" class="text-input contact-input" placeholder="your email address"/>
