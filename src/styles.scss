@@ -168,9 +168,9 @@ h2{
   }
 
 #best_sellers, #new_arrivals{
-  padding: 1.5em 0;
+  padding: .7em 0;
   header {
-    padding:    1.5em 0;
+    padding: 1.5em 0;
     h2, .view_more{
       display:inline;
       color: white;
@@ -189,7 +189,7 @@ h2{
 #related_products, #new_arrivals{
   padding: .7em 0;
   header {
-    padding:   1.5em 0;
+    padding: 1.5em 0;
     h2, .view_more{
       display:inline;
       color: white;
@@ -210,7 +210,7 @@ h2{
 
 .erow {
   width: 100%;
-  padding: 44px;
+  padding: 18px;
   overflow: scroll;
   // border-spacing:5em;
   display: flex;
