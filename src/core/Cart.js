@@ -54,6 +54,15 @@ const Cart = () => {
         // <Layout title="Shopping Cart" description="Checkout now!" className="container-fluid">
         <div>
           <Menu/>
+          <div id="banner" className="clearfix">
+                <div id="banner_content_wrapper">
+                    <div id="poster">
+
+                    </div>
+
+                </div>
+
+            </div>
           <div className="row">
             <div className="col-6">{items.length > 0 ? showItems(items) : noItemsMessage()}</div> 
               </div>

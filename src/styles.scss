@@ -6,6 +6,7 @@ $highlight: #73e298;
     box-sizing: border-box;
 }
 
+
 html, body{
   height: 100%;
   margin: 0px;
@@ -42,6 +43,7 @@ h2{
 
 #top_header{
     padding: 1.5em 0;
+    background: #000000;
     .logo {
         float: left;
         text-transform: uppercase;
@@ -73,7 +75,7 @@ h2{
     background: url(./images/homebanner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 330px;
+    height: 430px;
     width: 100%;
     padding: 6.5em 0;
     #banner_content_wrapper {
