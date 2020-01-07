@@ -3,6 +3,8 @@ import {Link} from "react-router-dom"
 import Layout from './Layout'
 import {getCart, removeItem} from './cartHelpers'
 import Card from './Card'
+import Menu from "./Menu"
+import Footer from "./Footer"
 import '../detailCard.scss'
 import DetailCard from './DetailCard'
 import Checkout from './Checkout'
@@ -49,7 +51,9 @@ const Cart = () => {
       );
      
       return (
-        <Layout title="Shopping Cart" description="Checkout now!" className="container-fluid">
+        // <Layout title="Shopping Cart" description="Checkout now!" className="container-fluid">
+        <div>
+          <Menu/>
           <div className="row">
             <div className="col-6">{items.length > 0 ? showItems(items) : noItemsMessage()}</div> 
               </div>
@@ -58,10 +62,11 @@ const Cart = () => {
               <hr /> */}
               <Checkout products={items} />
               </div>
+          <Footer/>
                
-            
+        </div>
           
-        </Layout>
+        // </Layout>
       );
     };
 

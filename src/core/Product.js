@@ -2,9 +2,11 @@ import React, {useState, useEffect} from 'react'
 import Layout from './Layout'
 import {read, listRelated} from './apiCore'
 import Card from './Card'
+import Menu from "./Menu"
 import '../detailCard.scss'
 // import '../styles.scss'
 import DetailCard from './DetailCard'
+import Footer from './Footer'
 
 
 
@@ -43,12 +45,23 @@ const Product = (props) => {
     }, [props])
 
     return(
-        <Layout 
-            title={product && product.name}
-            description={product && product.description && product.description.substring(0,100)}
-            className="container-fluid"
+        // <Layout 
+        //     title={product && product.name}
+        //     description={product && product.description && product.description.substring(0,100)}
+        //     className="container-fluid"
         
-        >           
+        // >
+    <div>  
+            <Menu/>      
+        <div id="banner" className="clearfix">
+                <div id="banner_content_wrapper">
+                    <div id="poster">
+
+                    </div>
+
+                </div>
+
+            </div>
             <div className="detailrow">
                 {/* <div className="post"> */}
                 {product && 
@@ -67,7 +80,8 @@ const Product = (props) => {
                         </div>
                     ))}
                 </div>
-        </Layout>
+                <Footer/>
+    </div>
     )
 }
 
