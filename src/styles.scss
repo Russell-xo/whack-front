@@ -55,21 +55,30 @@ h2{
 
         }
     }
-#main_nav {
-    float: right;
-    font-size: .9em;
-    padding-top: 1em;
-    a {
+  #main_nav {
+      float: right;
+      font-size: .9em;
+      padding-top: 1em;
+      a {
+          color: $secondary;
+          text-decoration: none;
+          margin-left: 1em;
+          }
+      link {
+          color: $secondary;
+          text-decoration: none;
+          margin-left: 1em;
+      }
+      
+      span {
         color: $secondary;
         text-decoration: none;
         margin-left: 1em;
         }
-    span {
-      color: $secondary;
-      text-decoration: none;
-      margin-left: 1em;
-      }
-  }
+    }
+}
+.menu {
+  display: none;
 }
 #banner {
     background: url(./images/homebanner.jpg);
@@ -95,23 +104,6 @@ h2{
             border-radius: .5em;
             box-shadow: 0px 0px 76px 0px rgba(0,0,0,0.47);
         }
-    }
-}
-
-@media only screen and (max-width: 768px){
-  #banner {
-    padding: 3.5em 0;
-    // width: 385px;
-    #poster {
-        width: 255px;    
-    }
-}
-}
-@media only screen and (max-width: 575px){
-  #banner {
-    #banner_content_wrapper {
-      display: block;
-  }    
     }
 }
 
@@ -632,6 +624,50 @@ h2{
 //     color: white;
 //   }
 // }
+
+@media only screen and (max-width: 768px){
+  #banner {
+    padding: 3.5em 0;
+    // width: 385px;
+    #poster {
+        width: 255px;    
+    }
+}
+}
+@media only screen and (max-width: 575px){
+  #banner {
+    #banner_content_wrapper {
+      display: block;
+  }    
+    }
+}
+
+@media only screen and (max-width: 768px){
+  #main_nav {
+    display: none;
+  }
+  #main_nav.active{
+    display: block;
+    width: 100%;
+    a {
+      display: block;
+      padding: 1em 0;
+      border-bottom: 1px solid #e9e9e9;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+  .menu{
+    display: block;
+    float: right;
+    i {
+      font-size: 1.5em;
+      color: white;
+      padding-top: .6em;
+    }
+  }
+}
 
 
 

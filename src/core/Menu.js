@@ -2,6 +2,7 @@ import React, {Fragment} from 'react'
 import {Link, withRouter} from 'react-router-dom'
 import {signout, isAuthenticated} from '../auth'
 import '../styles.scss'
+import './Hamburger'
 
 const isActive = (history, path) => {
     if(history.location.pathname === path) {
@@ -18,33 +19,34 @@ const Menu = ({history}) => (
     <header id="top_header" className="clearfix">
         <div className="wrapper">
             <h1 className="logo">Whack<span>T</span>icket</h1>
+            <a className="menu"><i className="fa fa-bars"></i></a>
             <nav id="main_nav">
-                <Link className="nav-link" style={isActive(history, "/")} to="/">Home</Link>
-            </nav>
+                <Link  style={isActive(history, "/")} to="/">Home</Link>
+             
             {isAuthenticated() && isAuthenticated().user.role === 0 &&(
-            <nav id="main_nav">
-                <Link className="nav-link" style={isActive(history, "/user/dashboard")} to="/user/dashboard">Dashboard</Link>
-            </nav>
+             
+                <Link  style={isActive(history, "/user/dashboard")} to="/user/dashboard">Dashboard</Link>
+            
             )}
             {isAuthenticated() && isAuthenticated().user.role === 1 &&(
-            <nav id="main_nav">
-                <Link className="nav-link" style={isActive(history, "/admin/dashboard")} to="/admin/dashboard">Dashboard</Link>
-            </nav>
+             
+                <Link  style={isActive(history, "/admin/dashboard")} to="/admin/dashboard">Dashboard</Link>
+             
             )}
             {!isAuthenticated() && ( 
             <Fragment>
-            <nav id="main_nav">
-                <Link className="nav-link" style={isActive(history, "/signin")} to="/signin">Signin</Link>
-            </nav>
-            <nav id="main_nav">
-                <Link className="nav-link" style={isActive(history, "/signup")} to="/signup">Signup</Link>
-            </nav>
+             
+                <Link style={isActive(history, "/signin")} to="/signin">Signin</Link>
+            
+             
+                <Link  style={isActive(history, "/signup")} to="/signup">Signup</Link>
+             
             </Fragment>
             )}
             {isAuthenticated() && ( 
-            <nav id="main_nav">
+             
                 <span 
-                    className="nav-link" 
+                    
                     style={{cursor: 'pointer', color: ''}}
                     onClick={() => 
                         signout(() =>{
@@ -53,8 +55,9 @@ const Menu = ({history}) => (
                     )}
                     >Signout
                 </span>   
-            </nav>
+             
              )}
+             </nav>
         </div>
     </header>
    
