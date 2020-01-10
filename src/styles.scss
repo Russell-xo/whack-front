@@ -220,6 +220,45 @@ h2{
 // #best_sellers{
 //   border-bottom: 1px solid #d4d4d4;
 // }
+#newsletter{
+  padding: 5em 0;
+  text-align: center;
+  background-color: black;
+  .newsletter_inner{
+    width: 600px;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 1.75em;
+    color: white;
+  }
+  .subscribe_form {
+    margin-top: .3em;
+    input[type="text"], input[type="email"]{
+      width: 48%;
+      margin: 0 .5em;
+      height: 3.25em;
+      border: none;
+      outline: none;
+      border-radius: .05em;
+      background: #404043;
+      padding: .1em .05em;
+      font-size: 6em;
+      color: white;
+    }
+    .button{
+      border: none;
+      outline: none;
+      padding: 1em 4.5em;
+      border-radius: 2em;
+      background: $highlight;
+      color: white;
+      font-weight: 700;
+      margin-top: 3em;
+      font-size: .9em;
+    }
+  }
+}
 
 .erow {
   width: 100%;
@@ -624,6 +663,22 @@ h2{
 //     color: white;
 //   }
 // }
+@media only screen and (max-width: 768px){
+  .footer{
+    position: relative;
+    display: block;
+  }
+  .footer-content{
+    display: block;
+    
+  }
+  .footer-section{
+    display: inline;
+  }
+  .footer-bottom {
+    position: relative;
+  }
+}
 
 @media only screen and (max-width: 768px){
   #banner {
