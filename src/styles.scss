@@ -98,6 +98,24 @@ h2{
     }
 }
 
+@media only screen and (max-width: 768px){
+  #banner {
+    padding: 3.5em 0;
+    // width: 385px;
+    #poster {
+        width: 255px;    
+    }
+}
+}
+@media only screen and (max-width: 575px){
+  #banner {
+    #banner_content_wrapper {
+      display: block;
+  }    
+    }
+}
+
+
 .box{
     width: 420px;
     padding: 40px;
