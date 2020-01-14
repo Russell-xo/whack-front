@@ -58,7 +58,7 @@ const Home = () => {
                 <div className="wrapper">
                     <header className="clearfix">
                         <h2>Raves</h2>
-                        {/* <p className="view_more">view all</p> */}
+                        <p className="view_more"></p>
                     </header>
                 </div>
              
@@ -74,7 +74,7 @@ const Home = () => {
                 <div className="wrapper">
                     <header className="clearfix">
                         <h2>Late Nights</h2>
-                        {/* <p className="view_more">view all</p> */}
+                        <p className="view_more"></p>
                     </header>
                 </div>
             
