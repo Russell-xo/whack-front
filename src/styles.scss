@@ -199,8 +199,8 @@ h2{
   }
 }
 
-#related_products, #new_arrivals{
-  padding: .7em 0;
+#related_products {
+  padding: 1.7em 0;
   header {
     padding: 1.5em 0;
     h2, .view_more{
@@ -687,6 +687,9 @@ h2{
     #poster {
         width: 255px;    
     }
+}
+  .erow {
+    padding: 4px;
 }
 }
 @media only screen and (max-width: 575px){

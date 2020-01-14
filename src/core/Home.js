@@ -57,8 +57,8 @@ const Home = () => {
             <section id="best_sellers" className="clearfix">
                 <div className="wrapper">
                     <header className="clearfix">
-                        <h2>Best Sellers</h2>
-                        <p className="view_more">view all</p>
+                        <h2>Raves</h2>
+                        {/* <p className="view_more">view all</p> */}
                     </header>
                 </div>
              
@@ -73,8 +73,8 @@ const Home = () => {
             <section id="new_arrivals" className="clearfix">
                 <div className="wrapper">
                     <header className="clearfix">
-                        <h2>new arrivals</h2>
-                        <p className="view_more">view all</p>
+                        <h2>Late Nights</h2>
+                        {/* <p className="view_more">view all</p> */}
                     </header>
                 </div>
             
