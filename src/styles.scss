@@ -9,8 +9,9 @@ $highlight: #73e298;
 
 html, body{
   height: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
   background: #181818;
   font-family: 'Open Sans', sans-serif;
 }
