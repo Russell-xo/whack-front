@@ -70,11 +70,14 @@ const Search = () => {
     const searchedProducts = (results = []) => {
         return (
             <div>
-                <h2 className="mt-4 mb-4">
+                <h2 className="wrapper">
                     {searchMessage(searched, results)}
                 </h2>
-                <div className="row">
-                    {results.map((product, i) => (<Card key={i} product={product} />
+                <div className="erow">
+                    {results.map((product, i) => (
+                        <div className= "post">
+                    <Card key={i} product={product} />
+                    </div>
                     ))}
 
                 </div>
@@ -85,7 +88,7 @@ const Search = () => {
     const searchForm = () => (
         <form onSubmit={searchSubmit}>
             {/* <span className="input-group-text"> */}
-                <div className="search-box">
+                <div className="searchwrapper">
                     {/* <div className="input-group-prepend"> */}
                         {/* <select className="btn mr-2" onChange={handleChange("category")}>
                             <option value="ALL">All</option> */}
@@ -96,11 +99,11 @@ const Search = () => {
 
                     <input
                         type="search"
-                        className="search-txt"
+                        className="input"
                         onChange={handleChange("search")}
                         placeholder="Type to search"
                     />
-                    <a className="search-btn" href="#">
+                    <a className="searchbuttn" href="#">
                     <i class="fas fa-search"></i>
                     </a>
 
@@ -115,15 +118,13 @@ const Search = () => {
 
 
     return (
-        <div className="row">
-            
-                {searchForm()}
-                {/* {JSON.stringify(results)} */}
-                <div className="container-fluid mb-3">
-                    {searchedProducts(results)}
-                </div>
-
-            </div>
+        <div >
+            {searchForm()}
+        
+            {searchedProducts(results)}
+        </div>
+        
+        
         
     )
 }

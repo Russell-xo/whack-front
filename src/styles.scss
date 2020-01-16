@@ -515,6 +515,64 @@ h2{
   width: 0px;
 
 }
+
+/* search bar*/
+.formbakg{
+background: black;
+}
+.searchwrapper{
+  // border: 1px solid blue;
+	  position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0,0.6);
+    max-width: 550px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.searchwrapper .input {
+    width: 85%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.searchbuttn {
+    background: #ffec00;
+    width: 10%;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.searchbuttn .fas{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+.searchrow{
+  border: 1px solid red;
+  width: 100%;
+  padding: 18px;
+  // overflow: scroll;
+  // border-spacing:5em;
+  height: 1px;
+  display: inline-block;
+  // margin-right: 8px;
+  margin-left: 4px;
+  justify-content: center;
+
+}
+
+
 .jumbotron {
   width: 100%;
   height: 55vh;

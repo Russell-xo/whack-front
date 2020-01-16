@@ -53,7 +53,7 @@ const Home = () => {
                 </div>
 
             </div>
-            {/* <Search></Search> */}
+            <Search/>
             <section id="best_sellers" className="clearfix">
                 <div className="wrapper">
                     <header className="clearfix">
