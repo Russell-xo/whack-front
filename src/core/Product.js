@@ -70,16 +70,15 @@ const Product = (props) => {
                 )}
                 </div>
             {/* </div> */}
-                <h4>Related products</h4>
+                {/* <h4>Related products</h4>
                 <div className="relatedrow">
-                    {/* <h4>Related products</h4> */}
                     {relatedProduct.map((p, i) => (
                     
                         <div className="relatedpost"> 
                             <Card key={i} product={p} />
                         </div>
                     ))}
-                </div>
+                </div> */}
                 <Footer/>
     </div>
     )
