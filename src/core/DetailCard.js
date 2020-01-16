@@ -86,7 +86,7 @@ const DetailCard = ({product, showViewProductButton = true, showAddToCartButton 
                 <article>
                     <h5>{product.description}</h5>
                 </article>
-                <div class="controls">
+                {/* <div class="controls">
                     <div class="color">
                     <h5>color</h5>
                     <ul>
@@ -111,7 +111,7 @@ const DetailCard = ({product, showViewProductButton = true, showAddToCartButton 
                         
                     </button>
                     </div>
-                </div>
+                </div> */}
 
                 {showAddToCart(showAddToCartButton)}
                 {showRemoveButton(showRemoveProductButton)}
